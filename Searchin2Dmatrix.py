@@ -1,0 +1,17 @@
+'''
+In this searching question we start form right corner of matrix and then move according to ascending 
+or descending way of matrix
+'''
+
+def search2Dmatrix(self,matrix,target):
+    row,col = 0,len(matrix[0])-1
+
+    while row<len(matrix) and col>=0:
+        if matrix[row][col] == target:
+            return True
+
+        elif matrix[row][col]<target:
+            row+=1
+        else:
+            col-=1
+    return True
