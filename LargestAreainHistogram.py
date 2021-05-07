@@ -11,7 +11,7 @@ def area(self,heights):
     for i,height in enumerate(heights):
         while heights[stack[-1]]>height:
             h = heights[stack.pop()]
-            w = i-stack[i]-1
+            w = i-stack[-1]-1
             area = max(area, h*w)
 
         stack.append(i)
